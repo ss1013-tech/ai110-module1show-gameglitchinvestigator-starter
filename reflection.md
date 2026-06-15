@@ -5,18 +5,24 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+The interface for normal difficulty show allowed attempts as 8, show attempts left as 7, but when I clicked Developer Debug info, it shows attempts: 1 when I didn't attempt to guess anything.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  1.The hints were backwards, I first guess 2, and then guess 20,50,80 then even I guess 100, it is still say go higher which is already out of the limit.
+  2.when I navigate to hard mode, it said on the left bar, range 1 to 50 but on the browser, it still said, guess a number between 1 to 100. And I can guess number beyond 50, so it seems the range and diffculty are not bound.
+  3.score are not have logic, although all my guesses are wrong, my score sometimes is -5, and sometime is -10, it should just be zero or keep reducing because I am not reach the correct one.
+
 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input       | Expected Behavior | Actual Behavior | Console Output / Error |
+|-------------|-------------------|-----------------|------------------------|
+| guess of 30 | Hints:Go Higher!  | Hints: Go Lower!| None                   |
+| guess of 101| Hints:Go Lower! because input shall only between 1 to 100 | Hints: Go Higher!| None|
+| guess of 80 in Hard mode| Number out of range,should be 1 to 50, Hints: Go Lower| Hints: Go Higher! because the secret for some reason is 81 which is odd because the range should be 1 to 50| None
 
 ---
 
@@ -30,7 +36,7 @@ Document at least 3 bugs you found. Add rows as needed.
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
+- How did you decide whether a bug was really fixed? 
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?

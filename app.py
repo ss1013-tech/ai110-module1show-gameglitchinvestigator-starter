@@ -34,7 +34,7 @@ if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
 if "score" not in st.session_state:
-    st.session_state.score = 0
+    st.session_state.score = 100
 
 if "status" not in st.session_state:
     st.session_state.status = "playing"
@@ -51,7 +51,7 @@ if st.session_state.active_difficulty != difficulty:
     st.session_state.active_difficulty = difficulty
     st.session_state.secret = random.randint(low, high)
     st.session_state.attempts = 0
-    st.session_state.score = 0
+    st.session_state.score = 100
     st.session_state.status = "playing"
     st.session_state.history = []
 
@@ -86,7 +86,7 @@ if new_game:
     st.session_state.attempts = 0
     # FIX: Use the current difficulty bounds for every new game.
     st.session_state.secret = random.randint(low, high)
-    st.session_state.score = 0
+    st.session_state.score = 100
     st.session_state.status = "playing"
     st.session_state.history = []
     st.success("New game started.")
