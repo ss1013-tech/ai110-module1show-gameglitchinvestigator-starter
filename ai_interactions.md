@@ -11,12 +11,20 @@
 **What task did you give the agent?**
 
 <!-- Describe the goal you asked the agent to accomplish -->
+finding the bug: the hints is opposite from what the expected 
 
 **What did the agent do?**
 
 <!-- List the steps the agent took (files edited, commands run, etc.) -->
+1. review code
+2. identify the potential function cause that bug
+3. provide suggest fix for review
 
 **What did you have to verify or fix manually?**
+1. I check the agent's suggestion
+2. provide some edge case to validate suggestion
+3. agent update suggestions
+4. I review an agent updated the code
 
 <!-- Describe anything the agent got wrong or that required human review -->
 
