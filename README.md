@@ -41,10 +41,11 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 6. Game returns hints "Go LOWER"
 5. User enters a guess of 84
 6. Game returns "Correct"
-7. Score updates correctly after each guess
+7. Score updates correctly after each guess (start with 100, reduce 10 if guess wrong, not reduce any score if it is correct)
 8. Game ends after the correct guess
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+<img src="image/screenshot.png">
 
 ## 🧪 Test Results
 
@@ -53,6 +54,15 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
 ```
+============================================================== test session starts ==============================================================
+platform win32 -- Python 3.12.6, pytest-8.4.2, pluggy-1.6.0
+rootdir: C:\Users\dingr\Desktop\Works\codepath\ai110-module1show-gameglitchinvestigator-starter\tests
+plugins: anyio-4.7.0, langsmith-0.8.7, mock-3.15.1
+collected 18 items                                                                                                                               
+
+test_game_logic.py ..................                                                                                                      [100%]
+
+============================================================== 18 passed in 0.06s ===============================================================
 
 ## 🚀 Stretch Features
 
