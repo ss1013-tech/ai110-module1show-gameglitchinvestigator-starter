@@ -49,18 +49,37 @@ finding the bug: the hints is opposite from what the expected
 **Prompt used:**
 
 ```
-<!-- Paste the prompt you gave the AI -->
+Please review my code for PEP 8 style compliance and apply its suggestions to resolve any formatting or naming issues it identifies.
 ```
 
 **Linting output before:**
 
 ```
-<!-- Paste relevant linter warnings/errors -->
+c:/Users/dingr/Desktop/Works/codepath/ai110-module1show-gameglitchinvestigator-starter/.venv/Scripts/python.exe -m ruff check . --select E,W,N
+E501 Line too long (112 > 88)
+  --> logic_utils.py:78:89
+	|
+76 |         through unexpectedly.
+77 |     """
+78 |     # FIX: This comparator is intended for numeric inputs from app-level validation, and modified backward logic
+	|                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+79 |     if guess == secret:
+80 |         return "Win", "🎉 Correct!"
+	|
+
+Found 1 error.
+```
+
+**Linting output after applying fixes:**
+
+```
+c:/Users/dingr/Desktop/Works/codepath/ai110-module1show-gameglitchinvestigator-starter/.venv/Scripts/python.exe -m ruff check . --select E,W,N
+All checks passed!
 ```
 
 **Changes applied:**
 
-<!-- Describe what you changed based on the AI's suggestions -->
+Ruff suggested one formatting fix (E501 line length) in `logic_utils.py` by flagging an overlong comment line. I split that comment into two shorter lines to satisfy PEP 8. Ruff did not suggest any naming changes (no N-rule violations), so no function or variable names were changed.
 
 ---
 
