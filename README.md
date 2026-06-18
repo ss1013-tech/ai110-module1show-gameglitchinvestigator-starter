@@ -26,8 +26,17 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game is for user to guess a number with limited attempts and it will give hints to user if they are guess too low or too high. If user guess correct then game over, congrats!
+
 - [ ] Detail which bugs you found.
+See reflection.md for details, in general the bug I found including hints backward, score calculation misleading, input number out of range without error, attempt limits and difficulty level is not associated.
+
 - [ ] Explain what fixes you applied.
+See reflection.md for details:
+hints backward - fix with logic reverse in logic_util.py
+score calculation misleading - fix by discussing logic with AI and propose deduct score only when guess incorrect
+input number out of range - fix by limit the range
+attempt limits and difficulty disconnect - fix by using current difficulty bounds for every new game.
 
 ## 📸 Demo Walkthrough
 
@@ -67,3 +76,4 @@ test_game_logic.py ..................                                           
 ## 🚀 Stretch Features
 
 - [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+implemented challenge 3 Professional Documentation and Linting
